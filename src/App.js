@@ -1,7 +1,43 @@
+import { Switch, Route, Link } from 'react-router-dom';
+import { Layout, Typography, Space } from 'antd';
+
+import { Navbar, CryptoDetails, Crypto, News, Homepage, Exchanges } from './components';
+import "./App.css"
+
 const App = () => {
     return (
-        <div>
-            Hello
+        <div className="app">
+            <div className="navbar">
+                <Navbar />
+            </div>
+            <div className="main">
+                <Layout>
+                    <div className="routes">
+                        <Switch>
+                            <Route exact path="/">
+                                <Homepage />
+                            </Route>
+                            <Route exact path="/exchanges">
+                                <Exchanges />
+                            </Route>
+                            <Route exact path="/cryptocurrencies">
+                                <Crypto />
+                            </Route>
+                            <Route exact path="/crypto/:coinId">
+                                <CryptoDetails />
+                            </Route>
+                            <Route exact path="/news">
+                                <News />
+                            </Route>
+                        </Switch>
+                    </div>
+                </Layout>
+                <div className="footer">
+                    <Typography.Title level={5} style={{ color: 'white', textAlign: 'center' }}>
+                        Zrypto <br /> All Rights Reserved &copy; 
+                    </Typography.Title>
+                </div>
+            </div>
         </div>
     )
 }
