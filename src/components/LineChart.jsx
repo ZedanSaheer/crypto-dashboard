@@ -19,7 +19,7 @@ const LineChart = ({ coinHistory, coinName, currentPrice }) => {
             data : coinPrice,
             fill : false,
             backgroundColor: '#0071bd' ,
-            borderColor : '#0071bd'
+            borderColor : '#ecc100'
         }]
     }
 
