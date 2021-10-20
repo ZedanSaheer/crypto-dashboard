@@ -60,7 +60,7 @@ const CryptoDetails = () => {
                 className="select-timeperiod"
                 placeholder="Select Time-Period"
                 onChange={(value) => setTimePeriod(value)}
-                style={{textTransform:'uppercase'}}>
+                style={{textTransform:'uppercase' , marginBottom:"20px"}}>
                 {time?.map((date) => (
                     <Option key={date} style={{textTransform:'uppercase'}}>{date}</Option>
                 ))}
@@ -68,13 +68,13 @@ const CryptoDetails = () => {
             <LineChart coinHistory={coinHistory} currentPrice={cryptoDetails ? millify(cryptoDetails?.price) : 0} coinName={cryptoDetails ? cryptoDetails?.name : ""} />
             <Col className="stats-container">
                 <Col className="coin-value-statistics">
-                    <Col className="coin-value-statistics-title">
-                        <Title level={3} className="coin-detailes-heading">{cryptoDetails?.name} Value Statistics</Title>
+                    <Col className="coin-value-statistics-title" style={{margin:"1rem"}}>
+                        <Title level={3} className="coin-detailes-heading" >{cryptoDetails?.name} Value Statistics</Title>
                         <p>An overview showing statistics of {cryptoDetails?.name} </p>
                     </Col>
                     {stats?.map(({ icon, title, value }) => (
                         <Col className="coin-stats" key={title}>
-                            <Col className="coin-stats-name">
+                            <Col className="coin-stats-name" style={{paddingRight:"20px"}}>
                                 <Text>{icon}</Text>
                                 <Text>{title}</Text>
                             </Col>
@@ -89,7 +89,7 @@ const CryptoDetails = () => {
                     </Col>
                     {genericStats?.map(({ icon, title, value }) => (
                         <Col className="coin-stats" key={title}>
-                            <Col className="coin-stats-name">
+                            <Col className="coin-stats-name" style={{paddingRight:"20px"}}>
                                 <Text>{icon}</Text>
                                 <Text>{title}</Text>
                             </Col>

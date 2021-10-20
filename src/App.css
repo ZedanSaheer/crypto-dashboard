@@ -2,7 +2,7 @@
     --text-primary:#000;
     --bgPrimary:#fff;
     --bgSecondary : #f9f9f9;
-    --pink : #0071bd;
+    --pink : rgb(7, 80, 148);;
     --border: #d9d9d9;
     --light-blue: #e6f7ff;
 }
@@ -22,7 +22,7 @@ a:hover{
 
 .navbar{
     flex: 0.2;
-    background-color: rgb(0, 21, 41);
+    background: transparent;
 }
 
 .main{
@@ -31,6 +31,7 @@ a:hover{
 }
 .nav-container{
     position: fixed;
+    width: 20%;
     left: 0;
     margin: 10px;
     display: flex;
@@ -46,7 +47,7 @@ a:hover{
 }
 
 .logo-container{
-    background-color: #001529;
+    background-color: #ecc100;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -77,7 +78,6 @@ a:hover{
 .ant-card-body{
     overflow: hidden;
 }
-
 .loader{
     height: 81vh;
     display: flex;
@@ -132,6 +132,7 @@ a:hover{
     }
     .home-title{
         font-size: 1.4rem !important;
+        text-transform: capitalize;
     }
     .show-more{
         font-size: 1.3rem !important;
@@ -156,6 +157,7 @@ a:hover{
 .coin-heading-container .coin-name{
     font-weight: 900;
     color: var(--pink);
+    text-transform: capitalize;
 }
 
 .coin-heading-container p{
@@ -182,6 +184,7 @@ a:hover{
     font-weight: 700 !important;
     margin-top: 20px !important;
     color: var(--pink) !important;
+    padding: 0 1rem;
 }
 
 .coin-stats{
@@ -219,6 +222,7 @@ a:hover{
 .coin-desc-link h2{
     font-weight: 700;
     color: var(--pink);
+    text-transform: capitalize;
 }
 
 .coin-desc-link p{
@@ -228,6 +232,7 @@ a:hover{
 
 .coin-desc-link a{
     color: var(--pink);
+    text-transform: capitalize;
 }
 
 .coin-desc-link h3{
@@ -342,6 +347,7 @@ width: 60%;
     gap: 20px !important;
     align-items: center !important;
     flex-wrap: wrap !important;
+    text-transform: capitalize;
 }
 .price-change{
     font-weight: 900 !important;
@@ -381,7 +387,7 @@ width: 60%;
 }
 
 .footer {
-    background-color: #001529;
+    background-color: #ecc100;
     display: flex;
     flex-direction: column;
     padding: 20px;

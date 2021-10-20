@@ -39,7 +39,7 @@ const LineChart = ({ coinHistory, coinName, currentPrice }) => {
                 <Title level={2} className="chart-title">
                     {coinName} Price Chart
                 </Title>
-                <Col className="price-container">
+                <Col className="price-container" >
                     <Title level={5} className="price-change"> 
                        {coinHistory && ( `Change : ${coinHistory?.data?.change}%`)}
                     </Title>

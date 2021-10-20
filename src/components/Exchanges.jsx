@@ -12,19 +12,18 @@ const Exchanges = () => {
 
     const { data, isFetching } = useGetExchangesQuery();
     const exchangeList = data?.data?.exchanges;
-    console.log(exchangeList);
 
     if (isFetching) return <Loader/>;
 
     return (
         <>
-            <Row>
-                <Col span={6}>Exchanges</Col>
-                <Col span={6}>24h Trade Volume</Col>
-                <Col span={6}>Markets</Col>
-                <Col span={6}>Change</Col>
+            <Row style={{marginBottom:"1rem"}}>
+                <Col span={6}><b>Exchanges</b></Col>
+                <Col span={6}><b>24h Trade Volume</b></Col>
+                <Col span={6}><b>Markets</b></Col>
+                <Col span={6}><b>Change</b></Col>
             </Row>
-            <Row>
+            <Row className="exchanges-row">
                 {exchangeList?.map((exchange)=>(
                     <Col span={24}>
                         <Collapse>
@@ -32,14 +31,13 @@ const Exchanges = () => {
                             showArrow={false}
                             header={(
                                 <Row key={exchange.id}>
-                                    <Col span={6}>
+                                    <Col span={6} style={{display:"flex",flexDirection:"column"}}>
                                         <Text>
                                             <strong>
                                                 {exchange.rank}.
                                             </strong>
                                         </Text>
                                         <Avatar className="exchange-image" src={exchange.iconUrl}>
-
                                         </Avatar>
                                         <Text>
                                             <strong>
