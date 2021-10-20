@@ -4,6 +4,7 @@ import { Typography, Row, Col, Statistic } from "antd";
 
 import { useGetCryptosQuery } from "../services/cryptoapi";
 import { Cryptocurrencies,News} from "../components";
+import Loader from "./Loader";
 
 const { Title } = Typography;
 
@@ -12,7 +13,7 @@ const Homepage = () => {
     const { data, isFetching } = useGetCryptosQuery(10);
     const globalStats = data?.data?.stats;
 
-    if (isFetching) return 'Loading....'
+    if (isFetching) return <Loader/>
 
     return (
         <>

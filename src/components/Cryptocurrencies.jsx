@@ -4,6 +4,7 @@ import { Card, Row, Col, Input } from 'antd'
 
 import { useGetCryptosQuery } from "../services/cryptoapi"
 import { useEffect, useState } from "react"
+import Loader from "./Loader"
 
 const Cryptocurrencies = ({ simplified }) => {
 
@@ -17,7 +18,7 @@ const Cryptocurrencies = ({ simplified }) => {
         setCryptos(filteredData);
     }, [search,cryptosList])
 
-    if (isFetching) return 'Loading...';
+    if (isFetching) return <Loader/>;
 
     return (
         <>

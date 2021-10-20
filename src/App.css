@@ -40,9 +40,15 @@ a:hover{
     background-color: rgb(0, 21, 41);
 }
 
+.lc-title{
+    display: flex;
+    align-items: center;
+}
+
 .logo-container{
     background-color: #001529;
     display: flex;
+    justify-content: space-between;
     padding: 20px;
     align-items: center;
     width: 100%;
@@ -64,6 +70,9 @@ a:hover{
     font-size: 1.2rem !important;
     background-color: var(--bgSecondary) !important;
     border: none !important;
+}
+.ant-menu{
+    position: relative !important;
 }
 
 .loader{

@@ -3,6 +3,7 @@ import moment from 'moment'
 import { useState } from 'react';
 import { useGetCryptosQuery } from '../services/cryptoapi';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
+import Loader from './Loader';
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -13,7 +14,7 @@ const News = ({ simplified }) => {
     const [newsCat, setNewsCat] = useState('Cryptocurrency');
     const { data } = useGetCryptosQuery(100);
     const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: newsCat, count: simplified ? 6 : 12 });
-    if (!cryptoNews?.value) return "Loading...";
+    if (!cryptoNews?.value) return <Loader/>;
 
 
     return (
