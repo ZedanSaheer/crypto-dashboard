@@ -25,8 +25,8 @@ const Homepage = () => {
                 <Col span={12}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets)}></Statistic></Col>
             </Row>
             <div className="home-heading-container">
-                <Title level={2} className="home-title">Top 10 Cryptocurrencies in the world</Title>
-                <Title level={4} className="show-more">
+                <Title level={2} className="home-title" style={{paddingRight:"2rem"}}>Top 10 Cryptocurrencies in the world</Title>
+                <Title level={4} className="show-more" style={{textAlign:"right"}}>
                     <Link to="/cryptocurrencies">
                         Show More
                     </Link>
@@ -34,8 +34,8 @@ const Homepage = () => {
             </div>
             <Cryptocurrencies simplified/>
             <div className="home-heading-container">
-                <Title level={2} className="home-title">Latest Crypto News</Title>
-                <Title level={4} className="show-more">
+                <Title level={2} className="home-title" style={{paddingRight:"2rem"}}>Latest Crypto News</Title>
+                <Title level={4} className="show-more" style={{textAlign:"right"}}>
                     <Link to="/news">
                         Show More
                     </Link>
