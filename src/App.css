@@ -74,6 +74,9 @@ a:hover{
 .ant-menu{
     position: relative !important;
 }
+.ant-card-body{
+    overflow: hidden;
+}
 
 .loader{
     height: 81vh;
